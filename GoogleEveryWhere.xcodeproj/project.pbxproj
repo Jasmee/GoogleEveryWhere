@@ -12,6 +12,7 @@
 		0FD5F1552058B89D00BFDD6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD5F1532058B89D00BFDD6C /* Main.storyboard */; };
 		0FD5F1572058B89D00BFDD6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FD5F1562058B89D00BFDD6C /* Assets.xcassets */; };
 		0FD5F15A2058B89D00BFDD6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD5F1582058B89D00BFDD6C /* LaunchScreen.storyboard */; };
+		9C7A12CCE155932C129EC33E /* Pods_GoogleEveryWhere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 577E2C30BF3938E6734ADE2D /* Pods_GoogleEveryWhere.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		0FD5F1562058B89D00BFDD6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FD5F1592058B89D00BFDD6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FD5F15B2058B89D00BFDD6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		577E2C30BF3938E6734ADE2D /* Pods_GoogleEveryWhere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleEveryWhere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64A75B456EC633B0578E027C /* Pods-GoogleEveryWhere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleEveryWhere.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleEveryWhere/Pods-GoogleEveryWhere.release.xcconfig"; sourceTree = "<group>"; };
+		EC0189749D661672EF8CCCBF /* Pods-GoogleEveryWhere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleEveryWhere.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleEveryWhere/Pods-GoogleEveryWhere.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C7A12CCE155932C129EC33E /* Pods_GoogleEveryWhere.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00FA59D2F32C5D2C21672588 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC0189749D661672EF8CCCBF /* Pods-GoogleEveryWhere.debug.xcconfig */,
+				64A75B456EC633B0578E027C /* Pods-GoogleEveryWhere.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		0FD5F1432058B89C00BFDD6C = {
 			isa = PBXGroup;
 			children = (
 				0FD5F14E2058B89D00BFDD6C /* GoogleEveryWhere */,
 				0FD5F14D2058B89D00BFDD6C /* Products */,
+				00FA59D2F32C5D2C21672588 /* Pods */,
+				D43A20295608ED2DFEE37ACC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = GoogleEveryWhere;
 			sourceTree = "<group>";
 		};
+		D43A20295608ED2DFEE37ACC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				577E2C30BF3938E6734ADE2D /* Pods_GoogleEveryWhere.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FD5F15E2058B89D00BFDD6C /* Build configuration list for PBXNativeTarget "GoogleEveryWhere" */;
 			buildPhases = (
+				4875FEDE4720FE0DE0BCFE01 /* [CP] Check Pods Manifest.lock */,
 				0FD5F1482058B89D00BFDD6C /* Sources */,
 				0FD5F1492058B89D00BFDD6C /* Frameworks */,
 				0FD5F14A2058B89D00BFDD6C /* Resources */,
+				BC9AB45C010230EAA991ED25 /* [CP] Embed Pods Frameworks */,
+				9A45B609A0CD7A02A895E715 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4875FEDE4720FE0DE0BCFE01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoogleEveryWhere-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A45B609A0CD7A02A895E715 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GoogleEveryWhere/Pods-GoogleEveryWhere-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleEveryWhere/Pods-GoogleEveryWhere-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC9AB45C010230EAA991ED25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleEveryWhere/Pods-GoogleEveryWhere-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0FD5F1482058B89D00BFDD6C /* Sources */ = {
@@ -272,6 +353,7 @@
 		};
 		0FD5F15F2058B89D00BFDD6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC0189749D661672EF8CCCBF /* Pods-GoogleEveryWhere.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +369,7 @@
 		};
 		0FD5F1602058B89D00BFDD6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64A75B456EC633B0578E027C /* Pods-GoogleEveryWhere.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
